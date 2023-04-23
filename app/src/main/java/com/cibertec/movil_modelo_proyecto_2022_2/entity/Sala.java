@@ -10,7 +10,15 @@ public class Sala {
     private String fechaRegistro;
     private int estado;
     private Sede sede;
+    private Modalidad modalidad;
 
+    public Modalidad getModalidad() {
+        return modalidad;
+    }
+
+    public void setModalidad(Modalidad modalidad) {
+        this.modalidad = modalidad;
+    }
 
     public int getIdSala() {
         return idSala;
