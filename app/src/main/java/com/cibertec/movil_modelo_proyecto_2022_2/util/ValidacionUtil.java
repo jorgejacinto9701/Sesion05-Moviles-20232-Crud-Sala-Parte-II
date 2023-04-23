@@ -2,7 +2,7 @@ package com.cibertec.movil_modelo_proyecto_2022_2.util;
 
 public class ValidacionUtil {
 
-    public static final String TEXTO = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s]{2,20}";
+    public static final String TEXTO = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s]{2,10}";
     public static final String DNI = "[0-9]{8}";
     public static final String NUM_HIJOS = "[0-9]|[1][0]";
     public static final String SUELDO = "(\\d+)|(\\d+[.]\\d{1,2})";

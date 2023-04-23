@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -33,7 +32,7 @@
             android:text="Numero sala"
             android:textAlignment="center" />
         <EditText
-            android:id="@+id/txtNumeroDeSala"
+            android:id="@+id/txtRegNumeroDeSala"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -45,7 +44,7 @@
             android:padding="4dp"
             android:text="Piso Sala" />
         <EditText
-            android:id="@+id/txtPisoDeSala"
+            android:id="@+id/txtRegPisoSala"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -57,7 +56,7 @@
             android:padding="4dp"
             android:text="Numero Alumnos" />
         <EditText
-            android:id="@+id/txtNumeroDeAlumnos"
+            android:id="@+id/txtRegNumeroDeAlumnos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -69,7 +68,7 @@
             android:padding="4dp"
             android:text="Recurso Sala" />
         <EditText
-            android:id="@+id/txtRecursoSala"
+            android:id="@+id/txtRegRecursoSala"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -81,29 +80,15 @@
             android:padding="4dp"
             android:text="Sede" />
         <Spinner
-            android:id="@+id/spnSedeSala"
+            android:id="@+id/spnRegSedeSala"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:padding="4dp"
             android:minHeight="48dp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Modalidad" />
-        <Spinner
-            android:id="@+id/spnModalidadSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:minHeight="48dp"/>
-
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnRegRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"

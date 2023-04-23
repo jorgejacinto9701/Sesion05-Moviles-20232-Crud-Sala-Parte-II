@@ -10,6 +10,6 @@ import retrofit2.http.GET;
 public interface ServiceModalidad {
 
     @GET("util/listaModalidad")
-    public Call<List<Modalidad>> listaTodos();
+    public Call<List<Modalidad>> listaModalidad();
 
 }
