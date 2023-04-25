@@ -172,9 +172,9 @@ public class ProveedorRegistraActivity extends NewAppCompatActivity {
 
     public  void insertaProveedor(Proveedor objProveedor){
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(objProveedor);
-        mensajeAlert(json);
+        //Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        //String json = gson.toJson(objProveedor);
+        //mensajeAlert(json);
 
         Call<Proveedor> call = serviceProveedor.insertaProveedor(objProveedor);
         call.enqueue(new Callback<Proveedor>() {
