@@ -25,5 +25,6 @@ public class ValidacionUtil {
     public static final String RUC = "[0-9]{11}";
     public static final String CELULAR = "[0-9]{9}";
     public static final String TELEFONO = "[0-9]{7}";
+    public static final String ANIO = "(?:(?:19|20)[0-9]{2})";
 
 }
