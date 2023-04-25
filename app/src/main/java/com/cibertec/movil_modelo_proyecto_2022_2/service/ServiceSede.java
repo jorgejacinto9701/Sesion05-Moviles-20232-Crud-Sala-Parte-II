@@ -11,5 +11,5 @@ import retrofit2.http.GET;
 public interface ServiceSede {
 
     @GET("util/listaSede")
-    public Call<List<Sede>> listaTodos();
+    public abstract Call<List<Sede>> listaSede();
 }
