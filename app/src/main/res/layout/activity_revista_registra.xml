@@ -84,7 +84,7 @@
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Paises" />
+        android:text="Países" />
 
     <Spinner
         android:id="@+id/spnPaises"
