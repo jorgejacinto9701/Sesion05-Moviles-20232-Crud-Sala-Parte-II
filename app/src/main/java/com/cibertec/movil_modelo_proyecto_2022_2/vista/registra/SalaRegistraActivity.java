@@ -21,6 +21,8 @@ import com.cibertec.movil_modelo_proyecto_2022_2.util.ConnectionRest;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.FunctionUtil;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.ValidacionUtil;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,17 +34,24 @@ import retrofit2.Response;
 
 public class SalaRegistraActivity extends NewAppCompatActivity {
 
+    //Los spinners como spnSede y spnModalidad
     Spinner spnSede, spnModalidad;
+
+    //Los adapters
     ArrayAdapter<String> adaptadorSede;
     ArrayAdapter<String> adaptadorModalidad;
+
+    //Los arrayList
     ArrayList<String> lstNombresSede = new ArrayList<String>();
     ArrayList<String> lstNombresModalidad = new ArrayList<String>();
+
+    //La lista para los spinners
     List<Sede> lstSedes;
     List<Modalidad> lstModalidades;
 
+    //Los service para cada spinner
     ServiceSede serviceSede;
     ServiceModalidad serviceModalidad;
-
     ServiceSala serviceSala;
 
     //Componentes del formulario
@@ -130,6 +139,11 @@ public class SalaRegistraActivity extends NewAppCompatActivity {
     }
 
     public void insertaSala(Sala objSala){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(objSala);
+        mensajeAlert(json);
+
+
         Call<Sala> call = serviceSala.insertaSala(objSala);
         call.enqueue(new Callback<Sala>() {
             @Override
