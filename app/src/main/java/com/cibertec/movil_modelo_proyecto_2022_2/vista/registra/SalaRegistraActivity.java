@@ -34,6 +34,7 @@ import retrofit2.Response;
 
 public class SalaRegistraActivity extends NewAppCompatActivity {
 
+
     //Los spinners como spnSede y spnModalidad
     Spinner spnSede, spnModalidad;
 
