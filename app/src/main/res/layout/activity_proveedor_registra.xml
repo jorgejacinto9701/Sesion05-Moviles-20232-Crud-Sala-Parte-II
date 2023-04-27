@@ -5,29 +5,193 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.registra.ProveedorRegistraActivity"
-    android:orientation="vertical">
-    android:padding="20dp"
+    android:orientation="vertical"
+    android:padding="5dp">
 
 
-    <TextView
-        android:id="@+id/idTitEditorial"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_registro_de_proveedor"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:layout_margin="5dp"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:text="Autor: Roberto Rosas"
-        android:textAlignment="center"
-        android:textSize="12sp"
-        android:textStyle="normal"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
+            <TextView
+                android:id="@+id/idTitEditorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/txt_registro_de_proveedor"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Autor: Roberto Rosas"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Razón Social" />
+
+            <EditText
+                android:id="@+id/txtRegRazonSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="RUC" />
+
+            <EditText
+                android:id="@+id/txtRegRuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:maxLength="11"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Dirección" />
+
+            <EditText
+                android:id="@+id/txtRegDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Teléfono" />
+
+            <EditText
+                android:id="@+id/txtRegTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:maxLength="7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Célular" />
+
+            <EditText
+                android:id="@+id/txtRegCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:maxLength="9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Contacto" />
+
+            <EditText
+                android:id="@+id/txtRegContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Fecha de Registro" />
+
+            <EditText
+                android:id="@+id/txtRegFechRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="País" />
+
+            <Spinner
+                android:id="@+id/spnPais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:text="Proveedor" />
+
+            <Spinner
+                android:id="@+id/spnProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Registrar"  />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
