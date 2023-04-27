@@ -26,6 +26,7 @@
         android:textAlignment="center"
         android:layout_margin="20dp"
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +34,6 @@
         android:textSize="15dp"
         android:layout_margin="4dp"
         />
-
     <EditText
         android:id="@+id/txtRazonSocial"
         android:layout_width="match_parent"
@@ -51,7 +51,6 @@
         android:textSize="15dp"
         android:layout_margin="4dp"
         />
-
     <EditText
         android:id="@+id/txtDireccionEditorial"
         android:layout_width="match_parent"
@@ -69,7 +68,6 @@
         android:layout_margin="4dp"
         android:textSize="15dp"
         />
-
     <EditText
         android:id="@+id/txtRucEditorial"
         android:layout_width="match_parent"
@@ -85,7 +83,6 @@
         android:layout_margin="4dp"
         android:textSize="15dp"
         />
-
     <EditText
         android:id="@+id/txtFechaCreacionEditorial"
         android:layout_width="match_parent"
@@ -101,7 +98,6 @@
         android:layout_margin="4dp"
         android:textSize="15dp"
         />
-
     <Spinner
         android:id="@+id/spnPaisEditorial"
         android:layout_width="match_parent"
@@ -117,7 +113,6 @@
         android:layout_margin="4dp"
         android:textSize="15dp"
         />
-
     <Spinner
         android:id="@+id/spnCategoriaEditorial"
         android:layout_width="match_parent"
@@ -133,7 +128,6 @@
         android:layout_margin="4dp"
         android:text="Registrar"
         android:textSize="15dp" />
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>
 

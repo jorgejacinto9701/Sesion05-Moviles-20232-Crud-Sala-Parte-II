@@ -10,6 +10,16 @@ public class Editorial {
     private int estado;
     private Pais pais;
 
+    private Categoria categoria;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     public int getIdEditorial() {
         return idEditorial;
     }
