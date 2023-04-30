@@ -162,7 +162,7 @@ public class EditorialRegistraActivity extends NewAppCompatActivity {
     public void RegistrarEditorial(Editorial objEditorial){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(objEditorial);
-        mensajeAlert(json);
+        //mensajeAlert(json);
 
         Call<Editorial> call = serviceEditorial.RegistrarEditorial(objEditorial);
         call.enqueue(new Callback<Editorial>() {

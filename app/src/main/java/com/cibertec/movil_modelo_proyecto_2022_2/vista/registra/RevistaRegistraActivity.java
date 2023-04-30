@@ -17,13 +17,14 @@ import com.cibertec.movil_modelo_proyecto_2022_2.R;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Modalidad;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Pais;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Revista;
-import com.cibertec.movil_modelo_proyecto_2022_2.entity.util.ConnectionRest;
-import com.cibertec.movil_modelo_proyecto_2022_2.entity.util.FunctionUtil;
-import com.cibertec.movil_modelo_proyecto_2022_2.entity.util.NewAppCompatActivity;
-import com.cibertec.movil_modelo_proyecto_2022_2.entity.util.ValidacionUtil;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.ConnectionRest;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.FunctionUtil;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.ValidacionUtil;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceModalidad;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServicePais;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceRevista;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
