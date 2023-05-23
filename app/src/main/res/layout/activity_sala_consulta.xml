@@ -5,17 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.consulta.SalaConsultaActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:text="@string/txt_consulta_de_sala"
+        android:text="Lista de Sala - Ventocilla - G9"
+        android:textSize="20dp"
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        />
 
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar"
+        />
+
+    <GridView
+        android:id="@+id/gridSala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:horizontalSpacing="6dp"
+        android:verticalSpacing="6dp"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
