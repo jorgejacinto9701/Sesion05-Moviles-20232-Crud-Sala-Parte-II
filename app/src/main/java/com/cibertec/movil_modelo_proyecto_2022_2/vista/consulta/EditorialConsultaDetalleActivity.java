@@ -12,34 +12,35 @@ import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 
 public class EditorialConsultaDetalleActivity extends NewAppCompatActivity {
 
-    TextView txtIdEditorial, txtRazonSocial;
-    TextView txtDireccionEditorial, txtRucEditorial, txtPaisEditorial, txtCategoriaEditorial;
+    TextView txtDetalleIdEditorial, txtDetalleRazonSocial;
+    TextView txtDetalleDireccionEditorial, txtDetalleRucEditorial, txtDetallePaisEditorial, txtDetalleCategoriaEditorial;
 
-    Button btnVolver;
+    Button btnDetalleVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editorial_consulta_detalle);
 
-        txtIdEditorial = findViewById(R.id.txtIdEditorial);
-        txtRazonSocial = findViewById(R.id.txtRazonSocial);
-        txtDireccionEditorial = findViewById(R.id.txtDireccionEditorial);
-        txtPaisEditorial = findViewById(R.id.txtPaisEditorial);
-        txtCategoriaEditorial = findViewById(R.id.txtCategoriaEditorial);
-        txtRucEditorial = findViewById(R.id.txtRucEditorial);
+        txtDetalleIdEditorial = findViewById(R.id.txtDetalleIdEditorial);
+        txtDetalleRazonSocial = findViewById(R.id.txtDetalleRazonSocial);
+        txtDetalleDireccionEditorial = findViewById(R.id.txtDetalleDireccionEditorial);
+        txtDetalleRucEditorial = findViewById(R.id.txtDetalleRucEditorial);
+        txtDetallePaisEditorial = findViewById(R.id.txtDetallePaisEditorial);
+        txtDetalleCategoriaEditorial = findViewById(R.id.txtDetalleCategoriaEditorial);
+
 
         Bundle extras = getIntent().getExtras();
         Editorial objEditorial = (Editorial) extras.get("Var_Objeto");
 
-        txtIdEditorial.setText(objEditorial.getIdEditorial());
-        txtRazonSocial.setText(objEditorial.getRazonSocial());
-        txtDireccionEditorial.setText("Dirección: " + objEditorial.getDireccion());
-        txtPaisEditorial.setText("Pais: " + objEditorial.getPais().getNombre());
-        txtRucEditorial.setText("RUC: " + objEditorial.getRuc());
-        txtCategoriaEditorial.setText("Categoria: " + objEditorial.getCategoria().getDescripcion());
+        txtDetalleIdEditorial.setText(objEditorial.getIdEditorial());
+        txtDetalleRazonSocial.setText(objEditorial.getRazonSocial());
+        txtDetalleDireccionEditorial.setText("Dirección: " + objEditorial.getDireccion());
+        txtDetalleRucEditorial.setText("RUC: " + objEditorial.getRuc());
+        txtDetallePaisEditorial.setText("Pais: " + objEditorial.getPais().getNombre());
+        txtDetalleCategoriaEditorial.setText("Categoria: " + objEditorial.getCategoria().getDescripcion());
 
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        btnDetalleVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EditorialConsultaDetalleActivity.this, EditorialConsultaActivity.class);

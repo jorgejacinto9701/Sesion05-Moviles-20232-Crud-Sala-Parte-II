@@ -17,7 +17,7 @@
         android:orientation="vertical"
         >
         <TextView
-            android:id="@+id/txtIdEditorial"
+            android:id="@+id/txtDetalleIdEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -25,7 +25,7 @@
             android:textSize="15dp"
             />
         <TextView
-            android:id="@+id/txtRazonSocial"
+            android:id="@+id/txtDetalleRazonSocial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -41,25 +41,25 @@
         android:orientation="vertical"
         >
         <TextView
-            android:id="@+id/txtDireccionEditorial"
+            android:id="@+id/txtDetalleDireccionEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             />
         <TextView
-            android:id="@+id/txtRucEditorial"
+            android:id="@+id/txtDetalleRucEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             />
         <TextView
-            android:id="@+id/txtPaisEditorial"
+            android:id="@+id/txtDetallePaisEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             />
         <TextView
-            android:id="@+id/txtCategoriaEditorial"
+            android:id="@+id/txtDetalleCategoriaEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

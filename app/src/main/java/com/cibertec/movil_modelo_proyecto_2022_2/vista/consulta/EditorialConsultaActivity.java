@@ -86,7 +86,7 @@ public class EditorialConsultaActivity extends NewAppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Editorial>> call, Throwable t) {
-
+                mensajeAlert("Error al acceder al servicio Rest");
             }
         });
     }
