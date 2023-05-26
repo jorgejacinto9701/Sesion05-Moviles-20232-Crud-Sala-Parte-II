@@ -17,6 +17,19 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btnListaAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar Autor" />
+
+    <GridView
+        android:id="@+id/lstAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
