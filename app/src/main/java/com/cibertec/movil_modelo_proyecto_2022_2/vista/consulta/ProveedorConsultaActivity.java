@@ -42,7 +42,7 @@ public class ProveedorConsultaActivity extends NewAppCompatActivity {
         btnListar = findViewById(R.id.btnLista);
 
         gridProveedor = findViewById(R.id.gridProveedor);
-        adaptador = new ProveedorAdapter(this, R.layout.activity_proveedor_item, data);
+        adaptador = new ProveedorAdapter(this, R.layout.activity_proveedor_consulta_item, data);
         gridProveedor.setAdapter(adaptador);
 
         gridProveedor.setOnItemClickListener(new AdapterView.OnItemClickListener() {

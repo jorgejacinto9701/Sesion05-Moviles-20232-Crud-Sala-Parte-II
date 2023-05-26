@@ -30,7 +30,7 @@ public class ProveedorAdapter extends ArrayAdapter<Proveedor>  {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.activity_proveedor_item, parent, false);
+        View row = inflater.inflate(R.layout.activity_proveedor_consulta_item, parent, false);
 
         TextView txtIdProveedor = row.findViewById(R.id.txtIdProveedor);
         TextView txtRazonSocial = row.findViewById(R.id.txtRazonSocial);
