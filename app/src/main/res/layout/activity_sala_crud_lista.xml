@@ -18,6 +18,27 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btnCrudListar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar" />
+
+    <Button
+        android:id="@+id/btnCrudRegistra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registra" />
+
+
+    <GridView
+        android:id="@+id/gridCrudSalas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"/>
+
 
 
 
