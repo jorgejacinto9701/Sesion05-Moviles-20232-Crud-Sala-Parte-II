@@ -100,9 +100,9 @@ public class SalaRegistraActivity extends NewAppCompatActivity {
                 String numAlu = txtNumAlu.getText().toString();
                 String recSal = txtRecuSala.getText().toString();
 
-                if (!numSal.matches(ValidacionUtil.TEXTO)) {
+                if (!numSal.matches(ValidacionUtil.PATRON)) {
                     txtNumSala.setError("El numero de sala debe estar correcto");
-                } else if (!pisSal.matches(ValidacionUtil.EDAD)) {
+                } else if (!pisSal.matches(ValidacionUtil.PATRON_PISO)) {
                     txtPisSala.setError("El piso de sala debe estar correcto");
                 } else if (!numAlu.matches(ValidacionUtil.EDAD)) {
                     txtNumAlu.setError("El numero de Alumno debe estar correcto");

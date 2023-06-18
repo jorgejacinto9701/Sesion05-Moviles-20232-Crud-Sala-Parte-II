@@ -7,6 +7,9 @@ public class ValidacionUtil {
     public static final String NUM_HIJOS = "[0-9]|[1][0]";
     public static final String SUELDO = "(\\d+)|(\\d+[.]\\d{1,2})";
     public static final String PLACA = "[A-Z]{2}\\d{4}";
+
+    public static final String PATRON = "^S\\d{3}$";
+    public static final String PATRON_PISO = "\\d{1,2}";
     public static final String CORREO = "[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})";
 
 
