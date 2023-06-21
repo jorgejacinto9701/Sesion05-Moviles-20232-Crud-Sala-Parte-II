@@ -47,6 +47,18 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txtDetalleFechaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txtDetalleDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+        <TextView
             android:id="@+id/txtDetalleEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
