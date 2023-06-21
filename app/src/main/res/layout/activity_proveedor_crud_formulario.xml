@@ -7,14 +7,225 @@
     tools:context=".vista.crud.ProveedorCrudFormularioActivity"
     android:orientation="vertical">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:text="Matenimiento Proveedor"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/idCrudTituloProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Registra Proveedor - ROSAS"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Razón Social: GAMBYTE"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudRazonSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Razón Social"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="RUC: 11109876543"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudRuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="RUC"
+                android:maxLength="11"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Dirección: Jr. Río Santa 211"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Dirección"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Teléfono: 5221132"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Teléfono"
+                android:maxLength="7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Celular: 987654321"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Celular"
+                android:maxLength="9"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Contacto: Pepito Ramos"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Contacto"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Estado: 0 - 1"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/spnCrudEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Fecha de Registro: 2023-06-20"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/txtCrudFechaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Fecha de Registro"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="País: Perú"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/spnCrudPais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Tipo de Proveedor: Nacional - Internacional"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/spnCrudTipoProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+
+            <Button
+                android:id="@+id/btnCrudRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="REGISTRAR"/>
+
+            <Button
+                android:id="@+id/btnCrudRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="REGRESAR"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/txtDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,9 +42,7 @@
             android:id="@+id/txtFechaRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center" />
-
-
+            android:textAlignment="center" />-->
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
