@@ -76,21 +76,6 @@
                 android:hint="11 Dígitos"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" Fecha Creación"
-                android:layout_margin="4dp"
-                android:textSize="15dp"
-                />
-            <EditText
-                android:id="@+id/txtCrudFechaCreacionEditorial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:layout_margin="4dp"
-                android:hint="Seleccionar Fecha"
-                />
 
             <TextView
                 android:layout_width="match_parent"
