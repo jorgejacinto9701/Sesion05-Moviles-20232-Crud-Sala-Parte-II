@@ -173,7 +173,7 @@ public class RevistaRegistraActivity extends NewAppCompatActivity {
         mensajeAlert(json);
 
 
-        Call<Revista> call = serviceRevista.insertaRevista(objRevista);
+        Call<Revista> call = serviceRevista.registraRevista(objRevista);
         call.enqueue(new Callback<Revista>() {
             @Override
             public void onResponse(Call<Revista> call, Response<Revista> response) {
