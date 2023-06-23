@@ -30,27 +30,27 @@ public class EditorialAdapter extends ArrayAdapter<Editorial>  {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
     {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.activity_editorial_item, parent, false);
+        View row = inflater.inflate(R.layout.activity_editorial_crud_item, parent, false);
 
         Editorial objEditorial = lista.get(position);
 
-        TextView txtID = row.findViewById(R.id.DetalleIDEditorial);
+        TextView txtID = row.findViewById(R.id.txtCrudEditorialItemId);
         txtID.setText(String.valueOf(objEditorial.getIdEditorial()));
 
-        TextView txtRuc = row.findViewById(R.id.DetalleRucEditorial);
-        txtRuc.setText(String.valueOf(objEditorial.getRuc()));
+        TextView txtRazonSocial = row.findViewById(R.id.txtCrudEditorialRazonSocial);
+        txtRazonSocial.setText(objEditorial.getRazonSocial());
 
-        TextView txtDireccion = row.findViewById(R.id.DetalleDireccionEditorial);
+        TextView txtDireccion = row.findViewById(R.id.txtCrudEditorialItemDireccion);
         txtDireccion.setText(String.valueOf(objEditorial.getDireccion()));
 
-       TextView txtCategoria = row.findViewById(R.id.DetalleCategoria);
-       txtCategoria.setText(objEditorial.getCategoria().getDescripcion());
+        TextView txtRuc = row.findViewById(R.id.txtCrudEditorialItemRUC);
+        txtRuc.setText(String.valueOf(objEditorial.getRuc()));
 
-        TextView txtPais = row.findViewById(R.id.DetallePais);
+        TextView txtPais = row.findViewById(R.id.txtCrudEditorialItemPais);
         txtPais.setText(objEditorial.getPais().getNombre());
 
-        TextView txtRazonSocial = row.findViewById(R.id.DetalleRazonSocialEditorial);
-        txtRazonSocial.setText(objEditorial.getRazonSocial());
+        TextView txtCategoria = row.findViewById(R.id.txtCrudEditorialItemCategoria);
+        txtCategoria.setText(objEditorial.getCategoria().getDescripcion());
 
         return row;
     }

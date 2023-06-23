@@ -13,7 +13,7 @@ import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
 public class ProveedorConsultaDetalleActivity extends NewAppCompatActivity {
 
     TextView txtDetalleContacto, txtDetalleTelefono, txtDetalleCelular;
-    TextView txtDetalleEstado, txtDetallePais, txtDetalleTipoProveedor;
+    TextView txtDetalleEstado, txtDetallePais, txtDetalleTipoProveedor, txtDetalleDireccion, txtDetalleFechaRegistro;
     Button btnRegresar;
 
     @Override
@@ -27,6 +27,8 @@ public class ProveedorConsultaDetalleActivity extends NewAppCompatActivity {
         txtDetalleEstado = findViewById(R.id.txtDetalleEstado);
         txtDetallePais = findViewById(R.id.txtDetallePais);
         txtDetalleTipoProveedor = findViewById(R.id.txtDetalleTipoProveedor);
+        txtDetalleDireccion = findViewById(R.id.txtDetalleDireccion);
+        txtDetalleFechaRegistro = findViewById(R.id.txtDetalleFechaRegistro);
         btnRegresar = findViewById(R.id.btnDetalleRegresar);
 
         Bundle extras = getIntent().getExtras();
@@ -35,6 +37,8 @@ public class ProveedorConsultaDetalleActivity extends NewAppCompatActivity {
         txtDetalleContacto.setText(objProveedor.getContacto());
         txtDetalleTelefono.setText("Teléfono : " + objProveedor.getTelefono());
         txtDetalleCelular.setText("Célular : " + objProveedor.getCelular());
+        txtDetalleDireccion.setText("Dirección : " + objProveedor.getDireccion());
+        txtDetalleFechaRegistro.setText("Fecha de Registro : " + objProveedor.getFechaRegistro());
         txtDetalleEstado.setText("Estado : " + String.valueOf(objProveedor.getEstado()));
         txtDetallePais.setText("País : " + objProveedor.getPais().getNombre());
         txtDetalleTipoProveedor.setText("Proveedor : " + objProveedor.getTipoProveedor().getDescripcion());

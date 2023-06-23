@@ -35,15 +35,15 @@ public class ProveedorAdapter extends ArrayAdapter<Proveedor>  {
         TextView txtIdProveedor = row.findViewById(R.id.txtIdProveedor);
         TextView txtRazonSocial = row.findViewById(R.id.txtRazonSocial);
         TextView txtRuc = row.findViewById(R.id.txtRuc);
-        TextView txtDireccion = row.findViewById(R.id.txtDireccion);
-        TextView txtFechaRegistro = row.findViewById(R.id.txtFechaRegistro);
+        /*TextView txtDireccion = row.findViewById(R.id.txtDireccion);
+        TextView txtFechaRegistro = row.findViewById(R.id.txtFechaRegistro);*/
 
         Proveedor objProveedor = lista.get(position);
         txtIdProveedor.setText(String.valueOf(objProveedor.getIdProveedor()));
         txtRazonSocial.setText(objProveedor.getRazonsocial());
         txtRuc.setText(objProveedor.getRuc());
-        txtDireccion.setText(objProveedor.getDireccion());
-        txtFechaRegistro.setText(objProveedor.getFechaRegistro());
+        /*txtDireccion.setText(objProveedor.getDireccion());
+        txtFechaRegistro.setText(objProveedor.getFechaRegistro());*/
 
 
         return row;
