@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bodypar"
     android:padding="15sp"
     tools:context=".vista.crud.AutorCrudListaActivity">
 
@@ -16,8 +17,31 @@
         android:text="@string/txt_crud_de_autor"
         android:textAlignment="center"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btnCrudListaAutores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LISTAR AUTORES"
+
+        />
+
+    <Button
+        android:id="@+id/btnCrudRegistraAutores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR " />
+
+
+    <GridView
+        android:id="@+id/gridCrudAutores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

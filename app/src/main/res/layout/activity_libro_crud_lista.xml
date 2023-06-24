@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/color"
     android:padding="15sp"
     tools:context=".vista.crud.LibroCrudListaActivity">
 
@@ -13,12 +14,31 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="10dp"
+        android:textColor="@color/white"
         android:text="@string/txt_crud_de_libro"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnCrudListaLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LISTAR LIBRO"
 
+        />
 
+    <Button
+        android:id="@+id/btnCrudRegistraLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR LIBRO " />
 
+    <GridView
+        android:id="@+id/gridCrud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
