@@ -44,14 +44,14 @@ public class AutorConsultaDetalleActivity extends NewAppCompatActivity {
         txtapellidosAutor.setText("Apellidos:   " +objAutor.getApellidos());
         txtcorreoAutor.setText("Correo :       "+objAutor.getCorreo());
         txtfechaNacAutor.setText("Fecha Nacimiento:  " +objAutor.getFechaNacimiento());
-        txtcelularAutor.setText("Telefono:    "+ objAutor.getTelefono());
+        txtcelularAutor.setText("Teléfono:    "+ objAutor.getTelefono());
         txtfechRegisAutor.setText("Fecha de Registro:    "+ objAutor.getFechaRegistro());
         txtestadoAutor.setText("Estado:   "+Integer.toString(objAutor.getEstado()));
         txtidGradoAutor.setText("Id de grado:  "+Integer.toString(objAutor.getGrado().getIdGrado()));
         txtdescripGradoAutor.setText("Nombre del Grado:"  +objAutor.getGrado().getDescripcion());
-        txtidpaisAutor.setText("Id del Pais:  " +Integer.toString(objAutor.getPais().getIdPais()));
-        txtisoPaisAutor.setText("Iso-Pais:  "  +objAutor.getPais().getIso());
-        txtnombrePaisAutor.setText("Nombre del Pais: " +objAutor.getPais().getNombre());
+        txtidpaisAutor.setText("Id del País:  " +Integer.toString(objAutor.getPais().getIdPais()));
+        txtisoPaisAutor.setText("Iso-País:  "  +objAutor.getPais().getIso());
+        txtnombrePaisAutor.setText("Nombre del País: " +objAutor.getPais().getNombre());
 
         btnregresarAutor.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -127,15 +127,15 @@ public class AutorCrudFormularioActivity extends NewAppCompatActivity {
             String fecha = txtFechanacimiento.getText().toString();
             String telef = txtTelefono.getText().toString();
             if (!nomb.matches(ValidacionUtil.TEXTO)){
-                txtNombres.setError("EL NOMBRE ES DE 2 A 20 CARACTERES");
+                txtNombres.setError("El nombre es de 2 A 20 caracteres");
             } else if (!apelli.matches(ValidacionUtil.TEXTO)){
-                txtApellidos.setError("EL CAMPO APELLIDO es de 2 a 20 caracteres");
+                txtApellidos.setError("El campo apellido es de 2 a 20 caracteres");
             } else if (!corre.matches(ValidacionUtil.CORREO_GMAIL)) {
-                txtCorreo.setError("EL CORREO ES DE fran@gmail.com");
+                txtCorreo.setError("El correo es de fran@gmail.com");
             } else if (!fecha.matches(ValidacionUtil.FECHA)){
-                txtFechanacimiento.setError("LA FECHA ES DE ESTE FORMATO 2004-05-05");
+                txtFechanacimiento.setError("La fecha de este formato es 2004-05-05");
             } else if (!telef.matches(ValidacionUtil.CELULAR)) {
-                txtTelefono.setError("EL TELEFONO ES DE 9 DIGITOS");
+                txtTelefono.setError("El teléfono es de 9 dígitos");
             } else {
 
                 //PROGRAMANDO EN LA PARTE DE GRADO
@@ -180,7 +180,7 @@ public class AutorCrudFormularioActivity extends NewAppCompatActivity {
                 @Override
                 public void onResponse(Call<Autor> call, Response<Autor> response) {
                  Autor salida = response.body();
-                 String msg ="SE REGISTRO UN AUTOR \n";
+                 String msg ="SE REGISTRÓ UN AUTOR \n";
                  msg+="ID :" + salida.getIdAutor() + "\n";
                  msg+="AUTOR : "+ salida.getNombres();
                  mensajeAlert(msg);
@@ -201,15 +201,15 @@ public class AutorCrudFormularioActivity extends NewAppCompatActivity {
                 @Override
                 public void onResponse(Call<Autor> call, Response<Autor> response) {
                     Autor saliaza = response.body();
-                    String msg ="Se Actualizo correctamente al Autor \n";
+                    String msg ="Se Actualizó correctamente al Autor \n";
                     msg+="ID :"+ saliaza.getIdAutor() + "\n";
-                    msg+="NOMBREDE AUTOR : "+ saliaza.getNombres() +"\n";
+                    msg+="NOMBRE DE AUTOR : "+ saliaza.getNombres() +"\n";
                     mensajeAlert(msg);
                 }
 
                 @Override
                 public void onFailure(Call<Autor> call, Throwable t) {
-                    mensajeAlert("Error al acceder al servicios DE AUTOR ACTUALIZAR>>" + t.getMessage());
+                    mensajeAlert("Error al acceder al servicios de AUTOR ACTUALIZAR>>" + t.getMessage());
                 }
             });
         }
