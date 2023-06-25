@@ -142,10 +142,10 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
 
                 if (!nomb.matches(ValidacionUtil.NOMBRE)) {
 
-                    txtNombres.setError("Ingrese Nombres   de 1 hasta 30 caracteres");
+                    txtNombres.setError("Ingrese Nombres  de 1 hasta 30 caracteres");
                 } else if (!appe.matches(ValidacionUtil.APELLIDOS)) {
 
-                    txtApellidos.setError("Ingrese apellidos   de 1 hasta 30 caracteres");
+                    txtApellidos.setError("Ingrese apellidos  de 1 hasta 30 caracteres");
 
                 } else if (!corr.matches(ValidacionUtil.CORREO)) {
 
@@ -157,10 +157,10 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
 
                 } else if (!num.matches(ValidacionUtil.TELEFONO)) {
 
-                    txtNumero.setError("número es de 9 digitos");
+                    txtNumero.setError("El número es de 9 digitos");
 
                 } else if (spnGrado.getSelectedItem().toString().equals("Seleccione un grado")) {
-                    mensajeAlert("seleccione un grado");
+                    mensajeAlert("Seleccione un grado");
 
                 } else if (spnPais.getSelectedItem().toString().equals("Seleccione país")) {
                     mensajeAlert("Introduzca un país");
@@ -271,7 +271,7 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
             public void onResponse(Call<Autor> call, Response<Autor> response) {
                 if (response.isSuccessful()) {
                     Autor objAutor = response.body();
-                    String msg = " Se registro un autor " + "\n ";
+                    String msg = " Se registró un autor " + "\n ";
                     msg+= "id registrado : " + objAutor.getIdAutor() + "\n";
                     msg+= "Nombres : " + objAutor.getNombres() + "\n";
                     msg+= "Apellidos: " + objAutor.getApellidos() + "\n";
@@ -281,7 +281,7 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
 
                 } else {
 
-                    mensajeToast("no se accedio al rest >>>" );
+                    mensajeToast("no se accedió al rest >>>" );
 
                 }
 

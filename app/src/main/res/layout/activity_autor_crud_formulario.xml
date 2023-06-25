@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bodypar"
-    tools:context=".vista.crud.AlumnoCrudFormularioActivity">
+    tools:context=".vista.crud.AutorCrudFormularioActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -33,7 +33,7 @@
                 android:ems="10"
                 android:inputType="text"
                 android:textColorHint="@color/white"
-                android:hint="Nombres Autor"/>
+                android:hint="Nombres de Autor"/>
             <EditText
                 android:id="@+id/txtCrudApellidosAutor"
                 android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 android:ems="10"
                 android:textColorHint="@color/white"
                 android:inputType="text"
-                android:hint="APELLIDOS"/>
+                android:hint="Apellidos"/>
             <EditText
                 android:id="@+id/txtCrudCorreoAutor"
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:padding="10dp"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="CORREO DE AUTOR"/>
+                android:hint="Correo eletrónico"/>
             <EditText
                 android:id="@+id/txtCrudFechaAutor"
                 android:layout_width="match_parent"
@@ -60,7 +60,7 @@
                 android:padding="10dp"
                 android:ems="10"
                 android:inputType="date"
-                android:hint="FECHA NACIMIENTO"/>
+                android:hint="Fecha de nacimiento"/>
             <EditText
                 android:id="@+id/txtCrudTelefonoAutor"
                 android:layout_width="match_parent"
@@ -69,13 +69,13 @@
                 android:textColorHint="@color/white"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="TELEFONO"/>
+                android:hint="Teléfono"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:padding="10dp"
-                android:text="GRADO"
+                android:text="Grado"
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textSize="12sp"
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:padding="10dp"
-                android:text="PAÍSES DE AUTOR"
+                android:text="Países de autor"
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textSize="12sp"

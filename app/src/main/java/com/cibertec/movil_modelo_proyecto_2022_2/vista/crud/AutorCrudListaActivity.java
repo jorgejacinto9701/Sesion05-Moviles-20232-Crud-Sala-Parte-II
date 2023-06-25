@@ -53,7 +53,7 @@ public class AutorCrudListaActivity extends NewAppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AutorCrudListaActivity.this, AutorCrudFormularioActivity.class);
                 startActivity(intent);
-                intent.putExtra("var_titulo", "REGISTRA ALUMNO");
+                intent.putExtra("var_titulo", "REGISTRA AUTOR");
                 intent.putExtra("var_tipo", "REGISTRA");
                 startActivity(intent);
             }
