@@ -19,6 +19,7 @@ import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceSede;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.ConnectionRest;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.FunctionUtil;
 import com.cibertec.movil_modelo_proyecto_2022_2.util.NewAppCompatActivity;
+import com.cibertec.movil_modelo_proyecto_2022_2.util.ValidacionUtil;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -82,7 +83,10 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
         String tipo = (String) extras.get("var_tipo");
         String titulo = (String) extras.get("var_titulo");
 
-        if(tipo.equals("Actualiza")){
+        cargaModalidad();
+        cargaSede();
+
+        if (tipo.equals("Actualiza")) {
             objSalaSeleccionado = (Sala) extras.get("var_objeto");
             txtNombre.setText(objSalaSeleccionado.getNumero());
             txtPiso.setText(String.valueOf(objSalaSeleccionado.getPiso()));
@@ -118,7 +122,6 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
         btnCrudRegistra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String num = txtNombre.getText().toString();
                 String pis = txtPiso.getText().toString();
                 String numAlu = txtNumalu.getText().toString();
@@ -126,42 +129,48 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
                 String sede = spnCrudSalaSede.getSelectedItem().toString();
                 String moda = spnCrudModalidadSede.getSelectedItem().toString();
 
+                if (!num.matches(ValidacionUtil.PATRON)) {
+                    txtNombre.setError("El número de sala debe ser válido");
+                } else if (!pis.matches(ValidacionUtil.PATRON_PISO)) {
+                    txtPiso.setError("El piso de sala debe ser válido");
+                } else if (!numAlu.matches(ValidacionUtil.EDAD)) {
+                    txtNumalu.setError("El número de alumnos debe ser válido");
+                } else if (!recu.matches(ValidacionUtil.TEXTO)) {
+                    txtRecursos.setError("El recurso de sala debe tener entre 2 y 10 caracteres");
+                } else{
+                    // Conversiones seguras después de las validaciones
+                    int piso = Integer.parseInt(pis);
+                    int numAlumnos = Integer.parseInt(numAlu);
 
-                Sede objNewSede = new Sede();
-                objNewSede.setIdSede(Integer.parseInt(sede.split(":")[0]));
+                    Sede objNewSede = new Sede();
+                    objNewSede.setIdSede(Integer.parseInt(sede.split(":")[0]));
 
-                Modalidad objNewModalidad = new Modalidad();
-                objNewModalidad.setIdModalidad(Integer.parseInt(moda.split(":")[0]));
+                    Modalidad objNewModalidad = new Modalidad();
+                    objNewModalidad.setIdModalidad(Integer.parseInt(moda.split(":")[0]));
 
-                Sala objNewSala = new Sala();
-                objNewSala.setNumero(num);
-                objNewSala.setPiso(Integer.parseInt(pis));
-                objNewSala.setNumAlumnos(Integer.parseInt(numAlu));
-                objNewSala.setRecursos(recu);
-                objNewSala.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
-                objNewSala.setEstado(1);
-                objNewSala.setSede(objNewSede);
-                objNewSala.setModalidad(objNewModalidad);
+                    Sala objNewSala = new Sala();
+                    objNewSala.setNumero(num);
+                    objNewSala.setPiso(piso);
+                    objNewSala.setNumAlumnos(numAlumnos);
+                    objNewSala.setRecursos(recu);
+                    objNewSala.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
+                    objNewSala.setEstado(1);
+                    objNewSala.setSede(objNewSede);
+                    objNewSala.setModalidad(objNewModalidad);
 
-                if(tipo.equals("REGISTRA")){
-                    insertaSala(objNewSala);
-                }else if(tipo.equals("Actualiza")){
-                    Sala objAux = (Sala)extras.get("var_objeto");
-                    objNewSala.setIdSala(objAux.getIdSala());
-                    actualizaSala(objNewSala);
+                    if (tipo.equals("REGISTRA")) {
+                        insertaSala(objNewSala);
+                    } else if (tipo.equals("Actualiza")) {
+                        Sala objAux = (Sala) extras.get("var_objeto");
+                        objNewSala.setIdSala(objAux.getIdSala());
+                        actualizaSala(objNewSala);
+                    }
                 }
-
-
-
-
             }
         });
-
-        cargaSede();
-        cargaModalidad();
     }
 
-    public void insertaSala(Sala objSala){
+        public void insertaSala(Sala objSala){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(objSala);
 
@@ -177,8 +186,6 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
                     msg+="Piso : "+objSalida.getPiso() +"\n";
                     msg+="Alumnos : "+objSalida.getNumAlumnos() +"\n";
                     msg+="Recursos : "+objSalida.getRecursos() +"\n";
-                    msg+="Sede : "+objSalida.getSede().getNombre() +"\n";
-                    msg+="Modalidad : "+objSalida.getModalidad().getDescripcion() +"\n";
                     mensajeAlert(msg);
                 }else{
                     mensajeAlert(response.toString());

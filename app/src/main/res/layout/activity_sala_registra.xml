@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:padding="4dp"
-            android:text="Numero sala"
+            android:text="Número sala"
             android:textAlignment="center" />
         <EditText
             android:id="@+id/txtRegNumeroDeSala"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:padding="4dp"
-            android:text="Numero Alumnos" />
+            android:text="Número Alumnos" />
         <EditText
             android:id="@+id/txtRegNumeroDeAlumnos"
             android:layout_width="match_parent"

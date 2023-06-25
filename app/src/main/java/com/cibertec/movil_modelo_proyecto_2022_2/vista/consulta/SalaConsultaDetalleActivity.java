@@ -39,9 +39,9 @@ public class SalaConsultaDetalleActivity extends NewAppCompatActivity {
 
 
         //TODOS LOS TXTDETALLE DE LA CONSULTA SALA DETALLE
-        txtDetalleNumero.setText("Numero de Sala : " + objSala.getNumero());
-        txtDetallePiso.setText(String.valueOf("Numero de Piso : " +objSala.getPiso()));
-        txtDetalleNumAlumnos.setText(String.valueOf("Numero de Alumnos : "+ objSala.getNumAlumnos()));
+        txtDetalleNumero.setText("Número de Sala : " + objSala.getNumero());
+        txtDetallePiso.setText(String.valueOf("Número de Piso : " +objSala.getPiso()));
+        txtDetalleNumAlumnos.setText(String.valueOf("Número de Alumnos : "+ objSala.getNumAlumnos()));
         txtDetalleRecurso.setText(String.valueOf("Recursos : "+ objSala.getRecursos()));
         txtDetalleEstado.setText(String.valueOf("Estado : " + objSala.getEstado()));
         txtDetalleSede.setText("Nombre de la Sede : " + objSala.getSede().getNombre());
