@@ -220,8 +220,8 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
             public void onResponse(Call<Revista> call, Response<Revista> response) {
                 if(response.isSuccessful()){
                     Revista objSalida = response.body();
-                    String msg="Se registró la Revista con exito\n";
-                    msg+="ID : "+ objSalida.getIdRevista() +"\n";
+                    String msg="Se registro la Revista con éxito\n";
+                    msg+="CÓDIGO : "+ objSalida.getIdRevista() +"\n";
                     msg+="NOMBRE : "+ objSalida.getNombre() +"\n";
                     msg+="FRECUENCIA : "+objSalida.getFrecuencia() +"\n";
                     msg+="FECHA CREACIÓN : "+objSalida.getFechaCreacion() +"\n";
@@ -249,8 +249,8 @@ public class RevistaCrudFormularioActivity extends NewAppCompatActivity {
             public void onResponse(Call<Revista> call, Response<Revista> response) {
                 if (response.isSuccessful()) {
                     Revista objSalida = response.body();
-                    String msg = "Se actualizó la Revista con exito\n";
-                    msg+="ID : " + objSalida.getIdRevista() + "\n";
+                    String msg = "Se actualizó la Revista con éxito\n";
+                    msg+="CÓDIGO : " + objSalida.getIdRevista() + "\n";
                     msg+="NOMBRE : " + objSalida.getNombre() + "\n";
                     msg+="FRECUENCIA : "+objSalida.getFrecuencia() +"\n";
                     msg+="FECHA CREACIÓN : "+objSalida.getFechaCreacion() +"\n";

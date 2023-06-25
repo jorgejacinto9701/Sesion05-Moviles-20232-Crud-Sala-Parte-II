@@ -38,8 +38,9 @@ public class RevistaConsultaDetalleActivity extends NewAppCompatActivity {
         Bundle extras = getIntent().getExtras();
         Revista objRevista = (Revista) extras.get("VAR_OBJETO");
 
+        txtDetalleIdRevista.setText("Código : " + objRevista.getIdRevista());
+
         txtDetalleNombreRevista.setText("Nombre : " + objRevista.getNombre());
-        txtDetalleIdRevista.setText("ID : " + objRevista.getIdRevista());
         txtDetalleFrecuencia.setText("Frecuencia : " + objRevista.getFrecuencia());
         txtDetalleFechaCreacion.setText("Fecha de Creación : " + objRevista.getFechaCreacion());
         txtDetalleFechaRegistro.setText("Fecha de Registro : " + objRevista.getFechaRegistro());
