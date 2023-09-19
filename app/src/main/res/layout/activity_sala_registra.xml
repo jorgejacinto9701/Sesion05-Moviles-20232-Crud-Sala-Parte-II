@@ -1,115 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.registra.SalaRegistraActivity"
     android:orientation="vertical">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="10dp"
-        android:text="Sala: Andree Ventocilla"
+        android:text="@string/txt_registro_de_sala"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="4dp"
-            android:text="Número sala"
-            android:textAlignment="center" />
-        <EditText
-            android:id="@+id/txtRegNumeroDeSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Piso Sala" />
-        <EditText
-            android:id="@+id/txtRegPisoSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Número Alumnos" />
-        <EditText
-            android:id="@+id/txtRegNumeroDeAlumnos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Recurso Sala" />
-        <EditText
-            android:id="@+id/txtRegRecursoSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Sede" />
-        <Spinner
-            android:id="@+id/spnRegSedeSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:minHeight="48dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Modalidad" />
-        <Spinner
-            android:id="@+id/spnRegModalidadSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:minHeight="48dp"
-            />
-        <Button
-            android:id="@+id/btnRegRegistrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:padding="4dp"
-            android:text="Registrar" />
-</androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,67 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_gravity="center"
-    android:layout_margin="20dp"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="5dp">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    android:padding="10dp"
+    >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="6">
 
-        <TextView
-            android:id="@+id/txtCrudEditorialItemId"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
 
-        <TextView
-            android:id="@+id/txtCrudEditorialRazonSocial"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/txtCrudEditorialItemDireccion"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/txtCrudEditorialItemRUC"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/txtCrudEditorialItemPais"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/txtCrudEditorialItemCategoria"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center" />
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -3,10 +3,12 @@ plugins {
 }
 
 android {
+    namespace 'com.cibertec.proyecto'
+
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.cibertec.movil_modelo_proyecto_2022_2"
+        applicationId "com.cibertec.proyecto"
         minSdk 21
         targetSdk 32
         versionCode 1

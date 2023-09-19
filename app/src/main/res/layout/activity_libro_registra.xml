@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.crud.LibroCrudListaActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
+
 
     <TextView
         android:id="@+id/idTitlePage"
@@ -20,96 +18,9 @@
         android:text="@string/txt_registro_de_libro"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="bold"
-        tools:text="Registrar Libro" />
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/Titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Nombre :" />
 
-    <EditText
-        android:id="@+id/txtNombreLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:hint="Ingrese Nombre"
-        android:inputType="text"
-        android:maxLength="30" />
 
-    <TextView
-        android:id="@+id/lblAnio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Año :" />
-
-    <EditText
-        android:id="@+id/txtAnioLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:hint="Ingrese Año"
-        android:inputType="date"
-        android:maxLength="4" />
-
-    <TextView
-        android:id="@+id/lblSerie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Serie:" />
-
-    <EditText
-        android:id="@+id/txtSerieLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:hint="Ingrese Serie"
-        android:inputType="text"
-        android:maxLength="30" />
-
-    <TextView
-        android:id="@+id/lblCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Categorías :" />
-
-    <Spinner
-        android:id="@+id/spnCategoriasLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="3dp"
-        android:minHeight="50dp"/>
-
-    <TextView
-        android:id="@+id/lblPais"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="País :" />
-
-    <Spinner
-        android:id="@+id/spnPaisLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="3dp"
-        android:minHeight="50dp"/>
-
-    <Button
-        android:id="@+id/btnRegistrarLibro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Registrar Libro" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
-</ScrollView>

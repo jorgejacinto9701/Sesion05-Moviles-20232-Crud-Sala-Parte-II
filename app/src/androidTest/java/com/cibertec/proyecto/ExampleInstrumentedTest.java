@@ -1,4 +1,4 @@
-package com.cibertec.movil_modelo_proyecto_2022_2;
+package com.cibertec.proyecto;
 
 import android.content.Context;
 

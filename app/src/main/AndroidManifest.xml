@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.cibertec.movil_modelo_proyecto_2022_2">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -58,14 +57,6 @@
         <activity android:name=".vista.registra.UsuarioRegistraActivity" />
         <activity android:name=".vista.consulta.UsuarioConsultaActivity" />
 
-        <activity android:name=".vista.consulta.UsuarioConsultaDetalleActivity" />
-        <activity android:name=".vista.consulta.SalaConsultaDetalleActivity"  />
-        <activity android:name=".vista.consulta.RevistaConsultaDetalleActivity" />
-        <activity android:name=".vista.consulta.ProveedorConsultaDetalleActivity" />
-        <activity android:name=".vista.consulta.LibroConsultaDetalleActivity"  />
-        <activity android:name=".vista.consulta.EditorialConsultaDetalleActivity" />
-        <activity android:name=".vista.consulta.AutorConsultaDetalleActivity"  />
-        <activity android:name=".vista.consulta.AlumnoConsultaDetalleActivity"  />
 
     </application>
 

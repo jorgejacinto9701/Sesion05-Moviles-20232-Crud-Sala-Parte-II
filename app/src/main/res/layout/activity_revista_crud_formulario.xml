@@ -1,159 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
+<androidx.appcompat.widget.LinearLayoutCompat  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.crud.RevistaCrudFormularioActivity"
-    android:orientation="vertical"
-    android:layout_margin="20dp"
-    >
+    android:orientation="vertical">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/idCrudTituloRevista"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:text="Registra Revista - Amaya"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:text="Nombre"
-            android:textStyle="normal" />
-
-
-
-        <EditText
-            android:id="@+id/txtCrudNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="NOMBRE"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:text="Frecuencia"
-            android:textStyle="normal" />
-
-
-
-        <EditText
-            android:id="@+id/txtCrudFrecuencia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="FRECUENCIA"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:text="Fecha de Creación"
-            android:textStyle="normal" />
-
-        <EditText
-            android:id="@+id/txtCrudFechaCreacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:ems="10"
-            android:inputType="date"
-            android:hint="Fecha de Creación"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:text="Estado"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textStyle="normal" />
-
-        <Spinner
-            android:id="@+id/spnCrudRevistaEstado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:text="Modalidad"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textStyle="normal" />
-
-
-
-        <Spinner
-            android:id="@+id/spnCrudRevistaModalidad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:text="País"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textStyle="normal" />
-
-        <Spinner
-            android:id="@+id/spnCrudRevistaPais"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"/>
-
-
-        <Button
-            android:id="@+id/btnCrudRegistrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="REGISTRAR"/>
-
-        <Button
-            android:id="@+id/btnCrudRegresar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="REGRESAR"/>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</ScrollView>
-
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/txt_crud_de_revista"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

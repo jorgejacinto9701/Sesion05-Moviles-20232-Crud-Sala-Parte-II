@@ -5,108 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vista.crud.LibroCrudFormularioActivity"
-    android:orientation="vertical"
-    android:background="@drawable/color">
+    android:orientation="vertical">
 
-    <ScrollView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/idCrudTituloLibro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:text="@string/txt_crud_de_libro"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/txtCrudTitulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:ems="10"
-                android:inputType="text"
-                android:textColorHint="@color/white"
-                android:hint="Titulo del Libro"/>
-
-            <EditText
-            android:id="@+id/txtCrudAnio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:ems="10"
-            android:inputType="text"
-                android:textColorHint="@color/white"
-            android:hint="Año de publicación del Libro"/>
-
-            <EditText
-                android:id="@+id/txtSerieCrudLibro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:ems="10"
-                android:inputType="text"
-                android:textColorHint="@color/white"
-                android:hint="Serie del Libro"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:text="Categoria"
-                android:textAlignment="center"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:textStyle="normal" />
-            <Spinner
-                android:id="@+id/spnCrudSpinnerCategoria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:text="Pais"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="normal" />
-            <Spinner
-                android:id="@+id/spnCrudSpinnerPais"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"/>
-
-            <Button
-                android:id="@+id/btnCrudRegistrarLibro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="ACTUALIZAR LIBRO"/>
-
-            <Button
-                android:id="@+id/btnCrudRegresarLista"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="REGRESAR A LA LISTA"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/txt_crud_de_libro"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
-
-
-    </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>

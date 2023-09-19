@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".vista.consulta.RevistaConsultaActivity"
-android:orientation="vertical"
-android:layout_margin="20dp"
-    >
-
-
-<TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Listar Revista - Amaya"
-    android:textSize="20dp"
-    android:textAlignment="center"
-    />
+    android:layout_height="match_parent"
+    tools:context=".vista.consulta.RevistaConsultaActivity"
+    android:orientation="vertical">
 
-<Button
-    android:id="@+id/btnLista"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Listar"
-    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/txt_consulta_de_revista"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-<GridView
-    android:id="@+id/gridRevista"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:numColumns="2"
-    android:horizontalSpacing="6dp"
-    android:verticalSpacing="6dp"
-    />
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="50dp"
-    android:layout_gravity="center"
-    android:layout_margin="20dp"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="5dp"
-
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    android:padding="10dp"
     >
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-
-        android:weightSum="5">
 
 
-        <TextView
-            android:id="@+id/txtCrudItemnombreAutor"
-            android:layout_width="110dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/txtCrudItemApellidosAutor"
-            android:layout_width="110dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textAlignment="center" />
-        <TextView
-            android:id="@+id/txtCrudItemCorreoAutor"
-            android:layout_width="190dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textAlignment="center" />
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-</androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>
