@@ -1,6 +1,8 @@
 package com.cibertec.proyecto.vista.registra;
 
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.view.AttachedSurfaceControl;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,12 +23,17 @@ import com.cibertec.proyecto.util.ConnectionRest;
 import com.cibertec.proyecto.util.FunctionUtil;
 import com.cibertec.proyecto.util.NewAppCompatActivity;
 
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 public class AutorRegistraActivity extends NewAppCompatActivity {
 
@@ -109,28 +116,6 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
 
     }
 
-    public void insertarAutor(Autor objAutor) {
-        Call<Autor> call=servicioAutor.insertaAutor(objAutor);
-        call.enqueue(new Callback<Autor>() {
-            @Override
-            public void onResponse(Call<Autor> call, Response<Autor> response) {
-                if (response.isSuccessful()){
-                    Autor objSalida=response.body();
-                    mensajeAlert("Registro Exitoso >>>ID>>> "+ objSalida.getIdAutor()+">>>Autor: >>>"+
-                            objSalida.getNombres());
-                }else {
-                    mensajeToast(response.toString());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Autor> call, Throwable t) {
-                mensajeToast("Error al acceder al Servicio Rest "+t.getMessage());
-            }
-        });
-
-
-    }
 
 
 
@@ -160,14 +145,98 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
         spnGrado = findViewById(R.id.spinnerGrado);
         spnGrado.setAdapter(adaptadorGrado);
 
+
+        btnRegistrar=findViewById(R.id.btnRegistrarAutor);
+
+
         cargaGrado();
         cargaPais();
+
+
+        //TimeZone timeZone = TimeZone.getTimeZone("America/Lima");
+        //TimeZone timeZone = TimeZone.getTimeZone("GMT-05");
+        //SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+       // formatoFecha.setTimeZone(timeZone);
+        //String fechaActual = formatoFecha.format(new Date());
+
+        String fechaActual = DateFormat.format("yyyy-MM-dd HH:mm:ss", new Date()).toString();
+
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        //crear variables y obtener datos de las cajas y spinners
+        String nom = txtNombre.getText().toString();
+        String ape = txtApellido.getText().toString();
+        String correo = txtCorreo.getText().toString();
+        String fnac= txtFechaNac.getText().toString();
+        String fono = txtTelefono.getText().toString();
+        //obtener el id de los spinners separando lo obtenido por ":" y obteniendo el primer parametro
+        //valor obtenido en String
+        String idPais = spnPais.getSelectedItem().toString().split(":")[0];
+        String idGrado = spnGrado.getSelectedItem().toString().split(":")[0];
+
+        // se genera un objeto de la clase correspondiente y
+        // convierten el valor obtenido a INT
+        Pais objPais = new Pais();
+        objPais.setIdPais(Integer.parseInt(idPais));
+
+        Grado objGrado = new Grado();
+        objGrado.setIdGrado(Integer.parseInt(idGrado));
+
+        //se procede a setear los datos
+        Autor objAutor = new Autor();
+        objAutor.setNombres(nom);
+        objAutor.setApellidos(ape);
+        objAutor.setCorreo(correo);
+        objAutor.setFechaNacimiento(fnac);
+        objAutor.setTelefono(fono);
+        //se retorna los valores int de los spinners
+        objAutor.setPais(objPais);
+        objAutor.setGrado(objGrado);
+        //se asigna estado 1
+        objAutor.setEstado(1);
+
+        //para fecha de registro se llama a la funcion desde la carpeta util
+        //objAutor.setFechaRegistro(FunctionUtil.getFechaActualString()); (fallas)
+        objAutor.setFechaRegistro(fechaActual);
+
+        //invoca al metodo insertarAutor y se envia datos del objeto Autor
+        insertarAutor(objAutor);
+
+
 
 
 
 
     }
+});
 
+
+    }
+
+    public void insertarAutor(Autor objAutor) {
+        Call<Autor> call=servicioAutor.insertaAutor(objAutor);
+        call.enqueue(new Callback<Autor>() {
+            @Override
+            public void onResponse(Call<Autor> call, Response<Autor> response) {
+                if (response.isSuccessful()){
+                    Autor objSalida=response.body();
+                    mensajeAlert("Registro Exitoso >>>ID>>> "+ objSalida.getIdAutor()+">>>Autor: >>>"+
+                            objSalida.getNombres());
+                }else {
+                    mensajeAlert(response.toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Autor> call, Throwable t) {
+                mensajeAlert("Error al acceder al Servicio Rest "+t.getMessage());
+            }
+        });
+
+
+    }
 
 
 }
