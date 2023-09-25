@@ -15,6 +15,7 @@ import com.cibertec.proyecto.entity.Categoria;
 import com.cibertec.proyecto.entity.Libro;
 import com.cibertec.proyecto.entity.Pais;
 import com.cibertec.proyecto.service.ServiceCategoria;
+import com.cibertec.proyecto.service.ServiceCategoriaLibro;
 import com.cibertec.proyecto.service.ServiceLibro;
 import com.cibertec.proyecto.service.ServicePais;
 import com.cibertec.proyecto.util.ConnectionRest;
@@ -43,7 +44,7 @@ public class LibroRegistraActivity extends NewAppCompatActivity {
 
     ServiceLibro serviceLibro;
     ServicePais servicePais;
-    ServiceCategoria serviceCategoria;
+    ServiceCategoriaLibro serviceCategoria;
 
     Button btnRegistrar;
     EditText txtTitulo, txtAnio, txtSerie;
@@ -55,7 +56,7 @@ public class LibroRegistraActivity extends NewAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_libro_registra);
 
-        serviceCategoria = ConnectionRest.getConnection().create(ServiceCategoria.class);
+        serviceCategoria = ConnectionRest.getConnection().create(ServiceCategoriaLibro.class);
         servicePais = ConnectionRest.getConnection().create(ServicePais.class);
         serviceLibro = ConnectionRest.getConnection().create(ServiceLibro.class);
 
