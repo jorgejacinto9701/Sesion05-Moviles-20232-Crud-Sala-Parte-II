@@ -21,8 +21,11 @@ public class FunctionUtil {
 	public static String getFechaActualStringDateTime() {
 		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+<<<<<<<<< Temporary merge branch 1
 
-    return sdf.format(new Date());
+=========
+>>>>>>>>> Temporary merge branch 2
+		return sdf.format(new Date());
 	}
 
 	public static String getFechaActualString() {
