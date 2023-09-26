@@ -137,6 +137,7 @@ public class AlumnoRegistraActivity extends NewAppCompatActivity {
         alertDialog.show();
     }
 
+
     public void cargaPais(){
         Call<List<Pais>> call = servicePais.listaTodos();
         call.enqueue(new Callback<List<Pais>>() {
