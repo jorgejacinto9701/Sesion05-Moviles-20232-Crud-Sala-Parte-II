@@ -30,6 +30,10 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
+
+
+    <!-- Cambio de nombre de id , para no tener confusion -->
+
     <TextView
 
         android:layout_width="wrap_content"
@@ -37,15 +41,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="430dp"
+        android:layout_marginBottom="471dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="NOMBRES :"
+        android:text="NOMBRES:"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/txtNombres"
+        android:id="@+id/txtidNombres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -63,14 +66,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="471dp"
+        android:layout_marginBottom="430dp"
         android:ems="10"
+        android:inputType="text"
         android:text="APELLIDOS:"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <!-- Cambio de nombre de id , para no tener confusion -->
     <EditText
-        android:id="@+id/txtApellidos"
+        android:id="@+id/txtidApellidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -93,9 +98,9 @@
         android:text="TELEFONO :"
         android:textSize="18sp"
         android:textStyle="bold" />
-
+    <!-- Cambio de nombre de id , para no tener confusion -->
     <EditText
-        android:id="@+id/txtTelefono"
+        android:id="@+id/txtidTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -118,9 +123,9 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-
+    <!-- Cambio de nombre de id , para no tener confusion -->
     <EditText
-        android:id="@+id/txtDNI"
+        android:id="@+id/txtidDNI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -129,7 +134,8 @@
         android:layout_marginBottom="345dp"
         android:background="#FFFFFF"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+       />
 
     <TextView
 
@@ -143,9 +149,10 @@
         android:text="CORREO :"
         android:textSize="18sp"
         android:textStyle="bold" />
+    <!-- Cambio de nombre de id , para no tener confusion -->
 
     <EditText
-        android:id="@+id/txtCorreo"
+        android:id="@+id/txtidCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -170,8 +177,24 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <!-- Cambio de nombre de id , para no tener confusion -->
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="229dp"
+        android:ems="10"
+        android:text="NACIMIENTO :"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <EditText
-        android:id="@+id/txtDireccion"
+        android:id="@+id/txtidDireccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -182,20 +205,36 @@
         android:ems="10"
         android:inputType="text" />
 
+
+    <EditText
+        android:id="@+id/txtidNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="229dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="date" />
+
+    <!-- Cambio de nombre de id , para no tener confusion -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="207dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="186dp"
         android:ems="10"
         android:text="PAIS:"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+
     <Spinner
-        android:id="@+id/spnPais"
+        android:id="@+id/spnidPais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -203,7 +242,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="87dp"
-        android:layout_marginBottom="191dp"
+        android:layout_marginBottom="169dp"
         android:minHeight="50dp"
         android:padding="3dp" />
 
@@ -212,45 +251,45 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="173dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="151dp"
         android:ems="10"
         android:text="MODALIDAD:"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Spinner
-        android:id="@+id/spnModalidad"
+        android:id="@+id/spnidModalidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="161dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="130dp"
         android:minHeight="50dp"
         android:padding="3dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="106dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="87dp"
         android:text="Registrar" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="67dp"
-        android:ems="10"
-        android:text="Autor: Kevin Arica Corporacion CIBERTEC"
-        android:textSize="10sp"
-        android:textStyle="bold" />
-</RelativeLayout>
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginEnd="34dp"
+         android:layout_marginBottom="67dp"
+         android:ems="10"
+         android:text="Autor: Kevin Arica Corporacion CIBERTEC"
+         android:textSize="10sp"
+         android:textStyle="bold" />
+ </RelativeLayout>
