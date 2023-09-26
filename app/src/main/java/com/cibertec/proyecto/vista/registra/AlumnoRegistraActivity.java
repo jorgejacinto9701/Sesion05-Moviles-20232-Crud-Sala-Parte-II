@@ -2,7 +2,6 @@ package com.cibertec.proyecto.vista.registra;
 
 
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,17 +12,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 
 
-import com.cibertec.proyecto.entity.Alumno;
-
+import com.cibertec.proyecto.R;
 import com.cibertec.proyecto.entity.Modalidad;
 import com.cibertec.proyecto.entity.Pais;
+import com.cibertec.proyecto.entity.Alumno;
+
 import com.cibertec.proyecto.service.ServiceAlumno;
 import com.cibertec.proyecto.service.ServiceModalidad;
 import com.cibertec.proyecto.service.ServicePais;
+
 import com.cibertec.proyecto.util.ConnectionRest;
-
-
-import com.cibertec.proyecto.R;
 import com.cibertec.proyecto.util.FunctionUtil;
 import com.cibertec.proyecto.util.NewAppCompatActivity;
 
@@ -39,14 +37,11 @@ public class AlumnoRegistraActivity extends NewAppCompatActivity {
 
     Spinner spnPais;
     ArrayAdapter<String> adaptadorPais;
-    ArrayList<String> pais = new ArrayList<String>();
+    ArrayList<String> paises = new ArrayList<String>();
 
     Spinner spnModalidad;
     ArrayAdapter<String> adaptadorModalidad;
-    ArrayList<String> modalidad = new ArrayList<String>();
-
-
-
+    ArrayList<String> modalidades = new ArrayList<String>();
 
     ServicePais servicePais;
     ServiceModalidad serviceModalidad;
@@ -81,11 +76,11 @@ public class AlumnoRegistraActivity extends NewAppCompatActivity {
         txtNacimiento = findViewById(R.id.txtidNacimiento);
         btnidButton = findViewById(R.id.btnRegister);
 
-       adaptadorPais = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,pais);
-       spnPais = findViewById(R.id.spnidPais);
-       spnPais.setAdapter((adaptadorPais));
+        adaptadorPais = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,paises);
+        spnPais = findViewById(R.id.spnidPais);
+        spnPais.setAdapter((adaptadorPais));
 
-        adaptadorModalidad = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,modalidad);
+        adaptadorModalidad = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,modalidades);
         spnModalidad = findViewById(R.id.spnidModalidad);
         spnModalidad.setAdapter((adaptadorModalidad));
 
@@ -120,8 +115,8 @@ public class AlumnoRegistraActivity extends NewAppCompatActivity {
                 objAlumno.setFechaNacimiento(naci);
                 objAlumno.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
                 objAlumno.setEstado(1);
-                objAlumno.setPaises(objPais);
-                objAlumno.setModalidades(objModalidad);
+                objAlumno.setPais(objPais);
+                objAlumno.setModalidad(objModalidad);
 
                 insertaAlumno(objAlumno);
 
@@ -130,10 +125,10 @@ public class AlumnoRegistraActivity extends NewAppCompatActivity {
         });
 
     }
-public void mensajeToast(String mensaje){
+    public void mensajeToast(String mensaje){
         Toast toaast1= Toast.makeText(getApplicationContext(),mensaje, Toast.LENGTH_LONG);
         toaast1.show();
-}
+    }
 
     public void mensajeAlert(String msg) {
         androidx.appcompat.app.AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -141,6 +136,7 @@ public void mensajeToast(String mensaje){
         alertDialog.setCancelable(true);
         alertDialog.show();
     }
+
 
     public void cargaPais(){
         Call<List<Pais>> call = servicePais.listaTodos();
@@ -150,7 +146,7 @@ public void mensajeToast(String mensaje){
                 if (response.isSuccessful()){
                     List<Pais> lst =  response.body();
                     for(Pais obj: lst){
-                        pais.add(obj.getIdPais() +":"+ obj.getNombre());
+                        paises.add(obj.getIdPais() +":"+ obj.getNombre());
                     }
                     adaptadorPais.notifyDataSetChanged();
                 }else{
@@ -173,7 +169,7 @@ public void mensajeToast(String mensaje){
                 if (response.isSuccessful()){
                     List<Modalidad> lst =  response.body();
                     for(Modalidad obj: lst){
-                        modalidad.add(obj.getIdModalidad() +":"+ obj.getDescripcion());
+                        modalidades.add(obj.getIdModalidad() +":"+ obj.getDescripcion());
                     }
                     adaptadorModalidad.notifyDataSetChanged();
                 }else{
@@ -194,7 +190,7 @@ public void mensajeToast(String mensaje){
             public void onResponse(Call<Alumno> call, Response<Alumno> response) {
                 if (response.isSuccessful()){
                     Alumno objSalida = response.body();
-                    mensajeAlert(" Registro exitoso  >>> >> "
+                    mensajeAlert(" Registro exitoso  >>> >> " + objSalida.getIdAlumno()
                             + " >>> Nombre del alumno >>> " +  objSalida.getNombres());
                 }else{
                     mensajeAlert(response.toString());
@@ -203,9 +199,9 @@ public void mensajeToast(String mensaje){
             @Override
             public void onFailure(Call<Alumno> call, Throwable t) {
                 mensajeToast("Error al acceder al Servicio Rest >>> " + t.getMessage());
-            }
-});
-}
+       }
+        });
+    }
 
 
 

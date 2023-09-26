@@ -1,295 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/carousel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="0dp"
+    tools:context=".vista.registra.AlumnoRegistraActivity"
     android:orientation="vertical"
-    tools:context=".vista.registra.AlumnoRegistraActivity">
+    android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/imageView"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="15dp"
-        />
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/idTitlePage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:text="Registro Alumno - Kevin Arica"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-    <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Nombres"
+                android:textAlignment="center"/>
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="521dp"
-        android:ems="10"
-        android:text="@string/txt_registro_de_alumno"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtidNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Apellidos" />
 
+            <EditText
+                android:id="@+id/txtidApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:inputType="text"/>
 
-    <!-- Cambio de nombre de id , para no tener confusion -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Teléfono" />
 
-    <TextView
+            <EditText
+                android:id="@+id/txtidTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:inputType="number"
+                android:maxLength="9"
+                />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="471dp"
-        android:ems="10"
-        android:text="NOMBRES:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Dni" />
 
-    <EditText
-        android:id="@+id/txtidNombres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="471dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="text" />
+            <EditText
+                android:id="@+id/txtidDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:inputType="number"
+                android:maxLength="8"/>
 
-    <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Correo" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="430dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="APELLIDOS:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtidCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:inputType="text" />
 
-    <!-- Cambio de nombre de id , para no tener confusion -->
-    <EditText
-        android:id="@+id/txtidApellidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="430dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Dirección" />
 
-    <TextView
+            <EditText
+                android:id="@+id/txtidDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:inputType="text" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="388dp"
-        android:ems="10"
-        android:text="TELEFONO :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-    <!-- Cambio de nombre de id , para no tener confusion -->
-    <EditText
-        android:id="@+id/txtidTelefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="389dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="Fecha de Nacimiento" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="157dp"
-        android:layout_marginBottom="345dp"
-        android:ems="10"
-        android:text="DNI :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <!-- Cambio de nombre de id , para no tener confusion -->
-    <EditText
-        android:id="@+id/txtidDNI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="345dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="text"
-       />
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="304dp"
-        android:ems="10"
-        android:text="CORREO :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-    <!-- Cambio de nombre de id , para no tener confusion -->
-
-    <EditText
-        android:id="@+id/txtidCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="301dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-
-        android:inputType="date" />
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="258dp"
-        android:ems="10"
-        android:text="DIRECCION :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <!-- Cambio de nombre de id , para no tener confusion -->
-
-    <TextView
-
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="229dp"
-        android:ems="10"
-        android:text="NACIMIENTO :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/txtidDireccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="259dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="text" />
+            <EditText
+                android:id="@+id/txtidNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:inputType="date" />
 
 
-    <EditText
-        android:id="@+id/txtidNacimiento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="229dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="date" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="País" />
 
-    <!-- Cambio de nombre de id , para no tener confusion -->
+            <Spinner
+                android:id="@+id/spnidPais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:minHeight="48dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="154dp"
-        android:layout_marginBottom="186dp"
-        android:ems="10"
-        android:text="PAIS:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Modalidad" />
+
+            <Spinner
+                android:id="@+id/spnidModalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:minHeight="48dp"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:padding="1dp"
+                android:text="Registrar" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 
 
-    <Spinner
-        android:id="@+id/spnidPais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="169dp"
-        android:minHeight="50dp"
-        android:padding="3dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="151dp"
-        android:ems="10"
-        android:text="MODALIDAD:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spnidModalidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="130dp"
-        android:minHeight="50dp"
-        android:padding="3dp" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="87dp"
-        android:text="Registrar" />
-
-    <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentEnd="true"
-         android:layout_alignParentBottom="true"
-         android:layout_marginEnd="34dp"
-         android:layout_marginBottom="67dp"
-         android:ems="10"
-         android:text="Autor: Kevin Arica Corporacion CIBERTEC"
-         android:textSize="10sp"
-         android:textStyle="bold" />
- </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -2,14 +2,75 @@ package com.cibertec.proyecto.entity;
 
 public class Alumno {
 
+    private int idAlumno;
     private String nombres;
     private String apellidos;
     private String telefono;
     private String dni;
-
+    private String correo;
+    private String direccion;
     private String fechaNacimiento;
     private String fechaRegistro;
     private int estado;
+    private Pais pais;
+    private Modalidad modalidad;
+
+    public int getIdAlumno() {
+        return idAlumno;
+    }
+
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
     public String getFechaNacimiento() {
         return fechaNacimiento;
@@ -35,83 +96,19 @@ public class Alumno {
         this.estado = estado;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public Pais getPais() {
+        return pais;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 
-    public String getDni() {
-        return dni;
+    public Modalidad getModalidad() {
+        return modalidad;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    private String correo;
-
-    private String direccion;
-
-
-    public Pais getPaises() {
-        return paises;
-    }
-
-    public void setPaises(Pais paises) {
-        this.paises = paises;
-    }
-
-    private Pais paises;
-
-
-    public Modalidad getModalidades() {
-        return modalidades;
-    }
-
-    public void setModalidades(Modalidad modalidades) {
-        this.modalidades = modalidades;
-    }
-
-    private Modalidad modalidades;
-
-    public String getNombres() {
-        return nombres;
-    }
-
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-
-
-
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-
+    public void setModalidad(Modalidad modalidad) {
+        this.modalidad = modalidad;
+}
 }
