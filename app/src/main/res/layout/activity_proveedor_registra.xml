@@ -6,18 +6,188 @@
     android:layout_height="match_parent"
     tools:context=".vista.registra.ProveedorRegistraActivity"
     android:orientation="vertical">
-    android:padding="20dp"
+
 
 
     <TextView
-        android:id="@+id/idTitEditorial"
+        android:id="@+id/idTitProveedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_registro_de_proveedor"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/razon_social"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/idtxtRazonSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:minHeight="48dp"
+        android:padding="3dp"
+        tools:ignore="DuplicateSpeakableTextCheck,TextFields,VisualLintTextFieldSize"
+        android:autofillHints="" />
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/ruc" />
+
+    <EditText
+        android:id="@+id/idtxtRuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="@string/txt_menu_proveedor"
+        android:inputType="number"
+        android:maxLength="11"
+        android:minHeight="48dp"
+        android:padding="3dp"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/direccion" />
+
+    <EditText
+        android:id="@+id/idtxtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:autofillHints=""
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:minHeight="48dp"
+        android:padding="3dp"
+        tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/telefono" />
+
+    <EditText
+        android:id="@+id/idtxtTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:inputType="number"
+        android:maxLength="9"
+        android:minHeight="48dp"
+        android:padding="3dp"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/celular" />
+
+    <EditText
+        android:id="@+id/idtxtCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:inputType="number"
+        android:maxLength="9"
+        android:minHeight="48dp"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/contacto" />
+
+    <EditText
+        android:id="@+id/idtxtContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:minHeight="48dp"
+        android:padding="3dp"
+        android:autofillHints=""
+        tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:text="@string/fecha_de_registro" />
+
+    <EditText
+        android:id="@+id/idtxtFechaReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="@string/txt_consulta_de_proveedor"
+        android:minHeight="48dp"
+        android:autofillHints=""
+        tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+    <Spinner
+        android:id="@+id/idspnPais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp" />
+
+    <Spinner
+        android:id="@+id/idspnTipoProveedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:text="@string/registrar"
+        tools:ignore="VisualLintButtonSize" />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mayra_salinas"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_margin="5dp"
+        tools:ignore="VisualLintBounds" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

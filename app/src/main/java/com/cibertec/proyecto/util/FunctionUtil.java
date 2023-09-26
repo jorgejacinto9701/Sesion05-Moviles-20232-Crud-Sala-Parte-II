@@ -1,16 +1,7 @@
 package com.cibertec.proyecto.util;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.List;
-import java.util.Random;
-
 
 
 public class FunctionUtil {
@@ -18,7 +9,7 @@ public class FunctionUtil {
 	public static int ESTADO_ACTIVO = 1;
 	public static int ESTADO_INACTIVO = 0;
 
-	public static String getFechaActualStringDateTime() {
+	public static String getFechaActualStringDateTime(String fecha) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
 		return sdf.format(new Date());
 	}
