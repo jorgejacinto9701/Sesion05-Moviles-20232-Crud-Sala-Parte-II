@@ -10,5 +10,5 @@ import retrofit2.http.GET;
 public interface ServicePais {
 
     @GET("util/listaPais")
-    public Call<List<Pais>> listaPais();
+    public Call<List<Pais>> listaTodos();
 }

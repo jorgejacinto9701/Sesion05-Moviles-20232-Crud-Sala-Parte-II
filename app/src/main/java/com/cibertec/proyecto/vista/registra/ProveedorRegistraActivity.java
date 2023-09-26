@@ -142,7 +142,7 @@
 
 
     public void cargaPais(){
-        Call<List<Pais>> call = servicePais.listaPais();
+        Call<List<Pais>> call = servicePais.listaTodos();
         call.enqueue(new Callback<List<Pais>>(){
             @Override
              public void onResponse(@NonNull Call<List<Pais>> call, @NonNull Response<List<Pais>> response){
