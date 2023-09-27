@@ -38,6 +38,15 @@
     <string name="txt_menu_revista">Revista</string>
     <string name="txt_menu_sala">Sala</string>
     <string name="txt_menu_usuario">Usuario</string>
+    <string name="razon_social">Razon Social:</string>
+    <string name="ruc">Ruc:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="celular">Celular:</string>
+    <string name="contacto">Contacto:</string>
+    <string name="fecha_de_registro">Fecha de Registro:</string>
+    <string name="mayra_salinas">Mayra Salinas</string>
+    <string name="registrar">Registrar</string>
 
 
 </resources>
