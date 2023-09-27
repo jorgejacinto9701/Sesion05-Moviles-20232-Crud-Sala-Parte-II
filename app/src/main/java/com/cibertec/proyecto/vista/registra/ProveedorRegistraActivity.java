@@ -56,28 +56,36 @@
     EditText txtRazonSoc, txtRuc, txtDireccion, txtTelefono, txtCelular, txtContacto, txtFechaReg;
 
 
-     public ProveedorRegistraActivity(Proveedor objProveedor) {
-     }
 
 
      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proveedor_registra);
+        System.out.println(1);
 
         //Conecta los servicios Rest
         servicePais = ConnectionRest.getConnection().create(ServicePais.class);
         serviceProveedor = ConnectionRest.getConnection().create(ServiceProveedor.class);
         serviceTipoProveedor = ConnectionRest.getConnection().create(ServiceTipoProveedor.class);
 
+         btnRegistrar = findViewById(R.id.btnRegistrar);
+        System.out.println(2);
 
         txtRazonSoc = findViewById(R.id.idtxtRazonSocial);
+         System.out.println(3);
         txtRuc = findViewById(R.id.idtxtRuc);
+         System.out.println(4);
         txtDireccion = findViewById(R.id.idtxtDireccion);
+         System.out.println(5);
         txtTelefono = findViewById(R.id.idtxtTelefono);
+         System.out.println(6);
         txtCelular = findViewById(R.id.idtxtCelular);
+         System.out.println(7);
         txtContacto = findViewById(R.id.idtxtContacto);
+         System.out.println(8);
         txtFechaReg = findViewById(R.id.idtxtFechaReg);
+         System.out.println(9);
 
         adaptadorPais = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, paises);
         spnPais = findViewById(R.id.idspnPais);
@@ -117,7 +125,7 @@
                  objProveedor.setCelular(celular);
                  objProveedor.setContacto(contacto);
                  objProveedor.setEstado(1);
-                 objProveedor.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime(fecha));
+                 objProveedor.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
 
                  insertaProveedor(objProveedor);
              }
