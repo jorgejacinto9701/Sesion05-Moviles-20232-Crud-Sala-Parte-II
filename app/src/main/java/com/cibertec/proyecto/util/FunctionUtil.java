@@ -9,8 +9,9 @@ public class FunctionUtil {
 	public static int ESTADO_ACTIVO = 1;
 	public static int ESTADO_INACTIVO = 0;
 
-	public static String getFechaActualStringDateTime(String fecha) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
+	public static String getFechaActualStringDateTime() {
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return sdf.format(new Date());
 	}
 
