@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
@@ -7,6 +9,60 @@
     android:padding="10dp"
     >
 
+    <TextView
+        android:id="@+id/txtID"
+        android:layout_width="58dp"
+        android:layout_height="63dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="ID"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="25dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toEndOf="@+id/txtID"
+        tools:layout_editor_absoluteY="25dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtApellido"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:text="Apellido"
+        app:layout_constraintStart_toEndOf="@+id/txtNombre"
+        tools:layout_editor_absoluteY="25dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="240dp"
+        android:layout_height="20dp"
+        android:text="Correo"
+        app:layout_constraintStart_toEndOf="@+id/txtID"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtFechaNac"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:text="Nacimiento"
+        app:layout_constraintStart_toEndOf="@+id/txtID"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
+
+    <TextView
+        android:id="@+id/txtCelular"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Celular"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaNac"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
