@@ -1,12 +1,12 @@
 package com.cibertec.proyecto;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
 import com.cibertec.proyecto.adapter.RevistaAdapter;
@@ -52,12 +52,9 @@ public class MainActivity extends NewAppCompatActivity {
 
         serviceRevista = ConnectionRest.getConnection().create(ServiceRevista.class);
 
-        btnListar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String filtro = txtNombre.getText().toString();
-                consulta(filtro);
-            }
+        btnListar.setOnClickListener(v -> {
+            String filtro = txtNombre.getText().toString();
+            consulta(filtro);
         });
 
 
@@ -68,17 +65,18 @@ public class MainActivity extends NewAppCompatActivity {
         Call<List<Revista>> call = serviceRevista.listaporRevista(filtro);
         call.enqueue(new Callback<List<Revista>>() {
             @Override
-            public void onResponse(Call<List<Revista>> call, Response<List<Revista>> response) {
+            public void onResponse(@NonNull Call<List<Revista>> call, @NonNull Response<List<Revista>> response) {
                 if (response.isSuccessful()){
                     List<Revista> lstSalida = response.body();
                     data.clear();
+                    assert lstSalida != null;
                     data.addAll(lstSalida);
                     adaptador.notifyDataSetChanged();
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Revista>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<Revista>> call, @NonNull Throwable t) {
                 mensajeAlert("ERROR -> Error en la respuesta" + t.getMessage());
             }
         });
