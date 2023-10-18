@@ -79,6 +79,7 @@ public class MainActivity extends NewAppCompatActivity {
             public void onFailure(@NonNull Call<List<Revista>> call, @NonNull Throwable t) {
                 mensajeAlert("ERROR -> Error en la respuesta" + t.getMessage());
             }
+
         });
     }
 
