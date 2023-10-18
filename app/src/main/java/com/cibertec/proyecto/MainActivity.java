@@ -3,6 +3,7 @@ package com.cibertec.proyecto;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class MainActivity extends NewAppCompatActivity {
 
     //****************Para la PC2**********************
 
+    EditText txtNombre;
     Button btnListar;
 
     ListView lstRevista;
@@ -41,7 +43,7 @@ public class MainActivity extends NewAppCompatActivity {
 
         setContentView(R.layout.activity_revista_consulta);
 
-
+        txtNombre = findViewById(R.id.txtRegEdiNombre);
         btnListar = findViewById(R.id.btnLista);
 
         lstRevista = findViewById(R.id.lstRevista);
@@ -53,7 +55,8 @@ public class MainActivity extends NewAppCompatActivity {
         btnListar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listaRevista();
+                String filtro = txtNombre.getText().toString();
+                consulta(filtro);
             }
         });
 
@@ -61,15 +64,14 @@ public class MainActivity extends NewAppCompatActivity {
 
     }
 
-    public void listaRevista(){
-        Call<List<Revista>> call = serviceRevista.listaRevista();
+    public void consulta(String filtro){
+        Call<List<Revista>> call = serviceRevista.listaporRevista(filtro);
         call.enqueue(new Callback<List<Revista>>() {
             @Override
             public void onResponse(Call<List<Revista>> call, Response<List<Revista>> response) {
                 if (response.isSuccessful()){
                     List<Revista> lstSalida = response.body();
-                    mensajeAlert(""+lstSalida.size());
-                    data.clear();;
+                    data.clear();
                     data.addAll(lstSalida);
                     adaptador.notifyDataSetChanged();
                 }
@@ -77,11 +79,9 @@ public class MainActivity extends NewAppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Revista>> call, Throwable t) {
-
+                mensajeAlert("ERROR -> Error en la respuesta" + t.getMessage());
             }
         });
-
-
     }
 
 
