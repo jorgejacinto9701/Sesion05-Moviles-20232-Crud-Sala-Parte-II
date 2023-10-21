@@ -24,6 +24,7 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:text="Revista:"
+        android:textSize="20sp"
         android:textAlignment="center"/>
 
     <EditText
@@ -31,12 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:hint="Escribir Revista"
         android:minHeight="48dp"
         android:padding="5dp" />
 
     <Button
-        android:id="@+id/btnLista"
+        android:id="@+id/btnListaRevistaConsulta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Listar"
