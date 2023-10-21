@@ -61,6 +61,7 @@ public class RevistaConsultaActivity extends NewAppCompatActivity {
     }
 
     public void consulta(String filtro){
+
         Call<List<Revista>> call = serviceRevista.listaporRevista(filtro);
         call.enqueue(new Callback<List<Revista>>() {
             @Override
