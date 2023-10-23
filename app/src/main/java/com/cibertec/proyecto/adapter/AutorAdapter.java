@@ -40,19 +40,19 @@ public class AutorAdapter extends ArrayAdapter<Autor>  {
         txtID.setText(String.valueOf(objProducto.getIdAutor()));
 
         TextView txtNombre = row.findViewById(R.id.txtNombre);
-        txtNombre.setText("Nombre :" + objProducto.getNombres());
+        txtNombre.setText(objProducto.getNombres());
 
         TextView txtApellido = row.findViewById(R.id.txtApellido);
-        txtApellido.setText("Apellido :" + objProducto.getApellidos());
+        txtApellido.setText(objProducto.getApellidos());
 
         TextView txtCorreo = row.findViewById(R.id.txtCorreo);
-        txtCorreo.setText("Correo :" +objProducto.getCorreo());
+        txtCorreo.setText(objProducto.getCorreo());
 
         TextView txtFechaNac = row.findViewById(R.id.txtFechaNac);
-        txtFechaNac.setText("F.Nac. :"+objProducto.getFechaNacimiento());
+        txtFechaNac.setText(objProducto.getFechaNacimiento());
 
         TextView txtCelular = row.findViewById(R.id.txtCelular);
-        txtCelular.setText("Teléf. :" + objProducto.getTelefono());
+        txtCelular.setText( objProducto.getTelefono());
 
         return row;
     }
