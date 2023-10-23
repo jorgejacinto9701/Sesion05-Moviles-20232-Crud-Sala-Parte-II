@@ -32,7 +32,7 @@ public class AutorAdapter extends ArrayAdapter<Autor>  {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.activity_autor_crud_item, parent, false);
+        View row = inflater.inflate(R.layout.activity_autor_consulta_item, parent, false);
 
         Autor objProducto = lista.get(position);
 

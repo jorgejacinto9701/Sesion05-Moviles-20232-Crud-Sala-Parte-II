@@ -73,7 +73,7 @@ btnListar.setOnClickListener(new View.OnClickListener() {
             public void onResponse(Call<List<Autor>> call, Response<List<Autor>> response) {
                 if (response.isSuccessful()){
                     List<Autor> lstAutor = response.body();
-                    mensajeAlert("Se encontraron "+lstAutor.size()+" resultados");
+
                     data.clear();
                     data.addAll(lstAutor);
                     adaptador.notifyDataSetChanged();
