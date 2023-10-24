@@ -104,11 +104,11 @@ public class Alumno {
         this.pais = pais;
     }
 
+
     public Modalidad getModalidad() {
         return modalidad;
     }
 
     public void setModalidad(Modalidad modalidad) {
         this.modalidad = modalidad;
-}
-}
+    }
