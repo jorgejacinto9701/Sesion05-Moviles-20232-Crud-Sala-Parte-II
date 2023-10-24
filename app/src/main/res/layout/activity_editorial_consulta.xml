@@ -17,6 +17,28 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/idTxtEditorialConsulta"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar"
+        android:padding="10dp"
+        android:id="@+id/idBtnEditorialConsulta"
+        />
+    <ListView
+        android:id="@+id/idLstEditorialConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+
+        />
+
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
