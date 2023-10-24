@@ -112,3 +112,5 @@ public class Alumno {
     public void setModalidad(Modalidad modalidad) {
         this.modalidad = modalidad;
     }
+
+}
