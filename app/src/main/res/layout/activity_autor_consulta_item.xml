@@ -8,8 +8,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="horizontal"
 android:weightSum="7"
-android:padding="10dp"
-    >
+android:padding="10dp">
 
     <TextView
         android:id="@+id/txtID"
