@@ -26,7 +26,8 @@
                 android:text="@string/txt_crud_de_sala"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/txtCrudTitulo"  />
 
 
 
