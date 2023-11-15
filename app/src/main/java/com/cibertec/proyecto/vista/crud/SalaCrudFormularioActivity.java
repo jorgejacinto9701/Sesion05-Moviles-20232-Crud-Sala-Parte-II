@@ -16,7 +16,10 @@ import com.cibertec.proyecto.service.SedeService;
 import com.cibertec.proyecto.service.ServiceModalidad;
 import com.cibertec.proyecto.service.ServiceSala;
 import com.cibertec.proyecto.util.ConnectionRest;
+import com.cibertec.proyecto.util.FunctionUtil;
 import com.cibertec.proyecto.util.NewAppCompatActivity;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,7 @@ import retrofit2.Response;
 
 public class SalaCrudFormularioActivity extends NewAppCompatActivity {
 
-    Button btnRegresar;
+    Button btnRegresar, btnProcesar;
     TextView  txtTitulo, txtNumero, txtPiso, txtNumAlu, txtRecursos;
 
     Spinner spnEstado;
@@ -50,12 +53,18 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
     String tipo;
     Sala objSalaSeleccionada;
 
+    ServiceSala serviceSala;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sala_crud_formulario);
 
+        serviceSala = ConnectionRest.getConnection().create(ServiceSala.class);
+
         btnRegresar = findViewById(R.id.btnCrudSalaRegresar);
+        btnProcesar = findViewById(R.id.btnCrudSalaRegistrar);
+
         txtTitulo = findViewById(R.id.txtCrudTitulo);
         txtNumero = findViewById(R.id.txtCrudNumero);
         txtPiso = findViewById(R.id.txtCrudPiso);
@@ -89,6 +98,9 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
             txtPiso.setText(String.valueOf(objSalaSeleccionada.getPiso()));
             txtNumAlu.setText(String.valueOf(objSalaSeleccionada.getNumAlumnos()));
             txtRecursos.setText(objSalaSeleccionada.getRecursos());
+            btnProcesar.setText("Actualizar");
+        }else{
+            btnProcesar.setText("Registrar");
         }
 
         cargaSede();
@@ -106,9 +118,81 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
             }
         });
 
+        btnProcesar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String sede = spnSede.getSelectedItem().toString().split(":")[0].trim().toString();
+                String modalidad = spnModalidad.getSelectedItem().toString().split(":")[0].trim().toString();
+                String estado = spnEstado.getSelectedItem().toString().split(":")[0].trim().toString();
+
+                Sede objSede = new Sede();
+                objSede.setIdSede(Integer.parseInt(sede));
+
+                Modalidad objModalidad = new Modalidad();
+                objModalidad.setIdModalidad(Integer.parseInt(modalidad));
+
+                Sala objSala = new Sala();
+                objSala.setNumero(txtNumero.getText().toString());
+                objSala.setPiso(Integer.parseInt(txtPiso.getText().toString()));
+                objSala.setNumAlumnos(Integer.parseInt(txtNumAlu.getText().toString()));
+                objSala.setRecursos(txtRecursos.getText().toString());
+                objSala.setSede(objSede);
+                objSala.setModalidad(objModalidad);
+                objSala.setEstado(Integer.parseInt(estado));
+                objSala.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
+
+
+                if (tipo.equals("Actualizar")){
+                    objSala.setIdSala(objSalaSeleccionada.getIdSala());
+                    actualiza(objSala);
+                }else{
+                    objSala.setIdSala(0);
+                    registra(objSala);
+                }
+            }
+        });
 
     }
 
+    public void registra(Sala objSala){
+       /*Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(objSala);
+        mensajeAlert(json);*/
+
+        Call<Sala> call = serviceSala.registra(objSala);
+        call.enqueue(new Callback<Sala>() {
+            @Override
+            public void onResponse(Call<Sala> call, Response<Sala> response) {
+                if (response.isSuccessful()){
+                    Sala objSalida = response.body();
+                    mensajeAlert(" Registro exitoso  >>> ID >> " + objSalida.getIdSala());
+                }else{
+                    mensajeAlert(response.toString());
+                }
+            }
+            @Override
+            public void onFailure(Call<Sala> call, Throwable t) {}
+        });
+    }
+    public void actualiza(Sala objSala){
+         /*Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(objSala);
+        mensajeAlert(json);*/
+        Call<Sala> call = serviceSala.actualiza(objSala);
+        call.enqueue(new Callback<Sala>() {
+            @Override
+            public void onResponse(Call<Sala> call, Response<Sala> response) {
+                if (response.isSuccessful()){
+                    Sala objSalida = response.body();
+                    mensajeAlert(" Actualización exitosa  >>> ID >> " + objSalida.getIdSala());
+                }else{
+                    mensajeAlert(response.toString());
+                }
+            }
+            @Override
+            public void onFailure(Call<Sala> call, Throwable t) {}
+        });
+    }
 
     public void cargaSede (){
         Call<List<Sede>> call = sedeService.listaTodos();
@@ -119,10 +203,20 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
                     List<Sede> lstSalida = response.body();
                     sedes.clear();
                     sedes.add(" [ Seleccione Sede ] ");
+                    int idSeleccionado = -1;
                     for(Sede objSede: lstSalida){
                         sedes.add(objSede.getIdSede()  + " : " + objSede.getNombre());
+                        if (tipo.equals("Actualizar")){
+                            if (objSede.getIdSede() == objSalaSeleccionada.getSede().getIdSede()){
+                                idSeleccionado = lstSalida.indexOf(objSede);
+                            }
+                        }
                     }
                     adaptadorSede.notifyDataSetChanged();
+                    if (tipo.equals("Actualizar")){
+                        spnSede.setSelection(idSeleccionado + 1);
+                    }
+
                 }
             }
            @Override
@@ -139,10 +233,19 @@ public class SalaCrudFormularioActivity extends NewAppCompatActivity {
                     List<Modalidad> lstSalida = response.body();
                     modalidades.clear();
                     modalidades.add(" [ Seleccione Modalidad ] ");
+                    int idSeleccionado = -1;
                     for(Modalidad objModalidad: lstSalida){
                         modalidades.add(objModalidad.getIdModalidad()  + " : " + objModalidad.getDescripcion());
+                        if (tipo.equals("Actualizar")){
+                            if (objModalidad.getIdModalidad() == objSalaSeleccionada.getModalidad().getIdModalidad()){
+                                idSeleccionado = lstSalida.indexOf(objModalidad);
+                            }
+                        }
                     }
                     adaptadorModalidad.notifyDataSetChanged();
+                    if (tipo.equals("Actualizar")){
+                        spnModalidad.setSelection(idSeleccionado + 1);
+                    }
                 }
             }
             @Override

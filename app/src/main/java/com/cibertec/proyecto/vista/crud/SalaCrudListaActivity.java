@@ -96,7 +96,6 @@ public class SalaCrudListaActivity extends NewAppCompatActivity {
                      adapatador.notifyDataSetChanged();
                 }
             }
-
             @Override
             public void onFailure(Call<List<Sala>> call, Throwable t) {}
         });
